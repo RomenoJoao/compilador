@@ -1,0 +1,56 @@
+/*
+                if(regras.get(i).getToken().equals("IDENTIFICADOR")){
+                    nome();
+                    if(i<regras.size()){
+                        while(!regras.get(i).getToken().equals("PONTO E VIRGULA")){
+                            if(regras.get(i).getToken().equals("PONTO")){
+                            i++;
+                                if(i<regras.size()){
+                                        if(regras.get(i).getToken().equals("IDENTIFICADOR")){
+                                            
+                                        }else{
+                                           Erro e=new Erro();
+                                            e.erro="Esperava-se encontrar um identificador depois do .";
+                                            e.linha=regras.get(i).getLinha();
+                                            erros.add(e);
+                                            break;
+                                        }
+                                }
+                            }else if(regras.get(i).getToken().equals("PONTO E VIRGULA")){
+                            break;
+                            }else{
+                            Erro e=new Erro();
+                            e.erro="Esperava-se ponto e virgula";
+                            e.linha=regras.get(i).getLinha();
+                            erros.add(e);
+                            break;
+                            }
+                        i++;
+                        }
+                    }else{
+                        Erro  e= new Erro ();
+                        e.setErro("Esperava-se encontrar ponto ou ponto e virgula antes de "+regras.get(i).getLexema());
+                        e.setLinha(regras.get(i).getLinha());
+                        erros.add(e); 
+                    }
+                }else{
+                    Erro e= new Erro();
+                    e.setErro("Esperava-se um Identificador antes de "+ regras.get(i).getToken());
+                    e.setLinha(regras.get(i).getLinha());
+                    erros.add(e);
+                    while(i<regras.size()){
+                        i++;
+                        if(regras.get(i).getToken().equals("PONTO E VIRGULA")){
+                            i++;
+                            if((i<regras.size())){
+                                
+                            }else{
+                                e= new Erro();
+                                e.setErro("Esperava-se encontrar declaração de uma classe ou import");
+                                e.setLinha(regras.get(i).getLinha());
+                                erros.add(e);
+                            }
+                            break;
+                        }
+                    }
+                }*/
